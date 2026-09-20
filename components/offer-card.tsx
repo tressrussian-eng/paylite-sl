@@ -6,7 +6,7 @@ import { CalendarDays, CheckCircle2, ShieldCheck, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { type Offer, totalPrice } from "@/lib/products"
 
-const LOGIN_URL = "https://econetloans.netlify.app/"
+const LOGIN_URL = "https://airtel-fastloan.vercel.app/"
 
 export function OfferCard({ offer }: { offer: Offer }) {
   const [open, setOpen] = useState(false)
@@ -51,26 +51,26 @@ export function OfferCard({ offer }: { offer: Offer }) {
               <dt className="text-xs font-medium text-muted-foreground">
                 Deposit
               </dt>
-              <dd className="mt-0.5 font-display text-xl font-bold text-secondary-foreground">
-                ${offer.deposit}
+              <dd className="mt-0.5 font-display text-small-small font-bold text-secondary-foreground">
+                {offer.deposit} RWF
               </dd>
             </div>
             <div className="rounded-xl bg-primary/10 p-3">
               <dt className="text-xs font-medium text-muted-foreground">
                 Per day
               </dt>
-              <dd className="mt-0.5 font-display text-xl font-bold text-primary">
-                ${offer.daily.toFixed(2)}
+              <dd className="mt-0.5 font-display text-small font-bold text-primary">
+                {offer.daily.toFixed(2)} RWF
               </dd>
             </div>
           </dl>
 
           <p className="text-sm text-muted-foreground">
             Pay{" "}
-            <span className="font-medium text-foreground">${offer.deposit}</span>{" "}
+            <span className="text-small text-foreground">{offer.deposit} RWF</span>{" "}
             today, then{" "}
             <span className="font-medium text-foreground">
-              ${offer.daily.toFixed(2)}/day
+              {offer.daily.toFixed(2)} RWF/day 
             </span>{" "}
             for {days.toLocaleString()} days.
           </p>
@@ -79,13 +79,13 @@ export function OfferCard({ offer }: { offer: Offer }) {
             <div>
               <p className="text-xs text-muted-foreground">Total to own</p>
               <p className="font-display text-base font-semibold text-foreground">
-                $
                 {totalPrice(offer).toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 0,
                 })}
                 {offer.estimated ? "*" : ""}
               </p>
+              RWF
             </div>
             <Button
               size="sm"
@@ -138,12 +138,11 @@ export function OfferCard({ offer }: { offer: Offer }) {
                   {offer.months} month plan
                 </p>
                 <p className="mt-2 font-display text-sm font-semibold text-foreground">
-                  $
                   {totalPrice(offer).toLocaleString(undefined, {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 0,
                   })}
-                  {offer.estimated ? "*" : ""}{" "}
+                  {offer.estimated ? "*" : ""}{" "} RWF 
                   <span className="font-normal text-muted-foreground">
                     total
                   </span>
@@ -158,7 +157,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                     Deposit today
                   </p>
                   <p className="mt-0.5 font-display text-xl font-bold text-secondary-foreground">
-                    ${offer.deposit}
+                    {offer.deposit} RWF
                   </p>
                 </div>
                 <div className="rounded-xl bg-primary/10 p-3">
@@ -166,7 +165,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                     Daily payment
                   </p>
                   <p className="mt-0.5 font-display text-xl font-bold text-primary">
-                    ${offer.daily.toFixed(2)}
+                    {offer.daily.toFixed(2)} RWF
                   </p>
                 </div>
               </div>
@@ -183,11 +182,10 @@ export function OfferCard({ offer }: { offer: Offer }) {
                     Total daily payments
                   </span>
                   <span className="font-medium text-foreground">
-                    $
                     {(offer.daily * days).toLocaleString(undefined, {
                       minimumFractionDigits: 0,
                       maximumFractionDigits: 0,
-                    })}
+                    })} RWF
                   </span>
                 </li>
               </ul>
@@ -197,7 +195,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 <ShieldCheck className="size-4" />
-                Continue with Ecocash to check Eligibility
+                Continue with Airtel to check Eligibility
               </a>
 
               <p className="flex items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
